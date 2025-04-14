@@ -5,10 +5,13 @@ Este repositorio contiene una colección de ejercicios y proyectos simples desar
 ---
 
 ## 📁 Estructura del repositorio
+```
 
-├── golang/ # Ejercicios en lenguaje Go └── python/ # Proyectos y scripts en Python
+├── golang/ # Ejercicios en lenguaje Go 
+└── python/ # Proyectos y scripts en Python
+```
 
-yaml
+
 Copiar
 Editar
 
