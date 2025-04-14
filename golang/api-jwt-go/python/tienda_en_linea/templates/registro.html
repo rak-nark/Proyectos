@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../static/styles/common.css">
+    <link rel="stylesheet" href="../static/styles/registro.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/tienda">Tienda</a></li>
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li><a href="/registro">Registrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="registro-container">
+            <h2>Crear Cuenta</h2>
+            <form action="/registro" method="POST">
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Nombre Completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="contrasena" placeholder="Contraseña" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+            <div class="link-login">
+                <p>¿Ya tienes cuenta? <a href="/login">Inicia sesión aquí</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
