@@ -1,0 +1,60 @@
+.registro-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 1s forwards;
+}
+
+.registro-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+}
+
+.link-login p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.link-login a {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.link-login a:hover {
+    text-decoration: underline;
+}
+
+

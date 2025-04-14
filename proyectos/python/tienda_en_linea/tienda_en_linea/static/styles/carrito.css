@@ -1,0 +1,116 @@
+/* Contenedor principal */
+.carrito-container {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del carrito */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de la tabla del carrito */
+.tabla-carrito {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es ancha */
+}
+
+/* Tabla del carrito */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+}
+
+table td {
+    font-size: 14px;
+}
+
+/* Imagen del producto en la tabla */
+.imagen-producto {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Total del carrito */
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-carrito h3 {
+    margin: 0;
+}
+
+.btn-finalizar-compra {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalizar-compra:hover {
+    background-color: #45a049;
+}
+
+/* Estilos de los enlaces de vuelta y cerrar sesión */
+.enlaces-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.enlaces-carrito a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.enlaces-carrito a:hover {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilo para el mensaje de carrito vacío */
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+
+
