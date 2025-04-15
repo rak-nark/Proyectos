@@ -8,24 +8,28 @@ import (
 	"github.com/rak-nark/proyectos/pkg/utils"
 )
 
+// middleware/auth.go
 func AuthMiddleware() gin.HandlerFunc {
     return func(c *gin.Context) {
-        // Extrae el token del header "Authorization"
         authHeader := c.GetHeader("Authorization")
         if authHeader == "" {
-            c.JSON(http.StatusUnauthorized, gin.H{"error": "Token no proporcionado"})
-            c.Abort()
+            c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Token no proporcionado"})
             return
         }
 
-        // Elimina "Bearer " si está presente
         tokenString := strings.TrimPrefix(authHeader, "Bearer ")
-
-        // Valida el token
         claims, err := utils.ValidateToken(tokenString)
         if err != nil {
-            c.JSON(http.StatusUnauthorized, gin.H{"error": "Token inválido: " + err.Error()})
-            c.Abort()
+            c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{
+                "error": "Token inválido",
+                "details": err.Error(),
+            })
+            return
+        }
+
+        // Verificamos que el email esté en los claims
+        if claims.Email == "" {
+            c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "Token no contiene email"})
             return
         }
 
