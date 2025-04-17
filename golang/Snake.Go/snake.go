@@ -190,4 +190,5 @@ func render() {
 	}
 
 	termbox.Flush()
+	
 }
